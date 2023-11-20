@@ -17,6 +17,10 @@ import java.util.TreeMap;
  *
  */
 public class BarChart { 
+    
+    private ArrayList<String> names;          // list of bar names
+    private ArrayList<Integer> values;        // list of bar values
+    private ArrayList<Color> colors;          // list of bar colors
 
     /**
      * Adds a bar to the bar chart.
@@ -56,6 +60,7 @@ public class BarChart {
         
         if (numberOfBars > 0)
         {    
+            
             // set the scale of the coordinate axes
             double xmax = Double.NEGATIVE_INFINITY;
                     
@@ -124,9 +129,7 @@ public class BarChart {
     private final String dataSource;          // data source
     private String caption;                   // caption
     private TreeMap<String, Color> colorOf;   // map category to color
-    private ArrayList<String> names;          // list of bar names
-    private ArrayList<Integer> values;        // list of bar values
-    private ArrayList<Color> colors;          // list of bar colors
+
     private boolean isSetMaxValue = false;
     private int maxValue = 0;
 
